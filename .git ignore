@@ -1,0 +1,80 @@
+# ===============================
+# Python / Flask
+# ===============================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.whl
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Flask instance folder
+instance/
+
+# Pytest / testing
+.pytest_cache/
+.coverage
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# Environment variables
+.env
+.env.*.local
+
+# ===============================
+# Node / React Frontend
+# ===============================
+
+# Node modules
+/frontend/node_modules/
+
+# Build output
+/frontend/build/
+frontend/dist/
+
+# Testing / coverage
+/frontend/coverage/
+
+# Environment variables
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.development
+/frontend/.env.production
+/frontend/.env.test
+
+# ===============================
+# MongoDB
+# ===============================
+
+# Database dumps
+*.dump
+*.bson
+
+# ===============================
+# IDE / Editor / OS
+# ===============================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+

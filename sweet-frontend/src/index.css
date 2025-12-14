@@ -1,0 +1,120 @@
+/* CSS without Tailwind @apply directives */
+
+:root {
+  --primary: 38 92% 50%;
+  --secondary: 25 95% 53%;
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-200: #fde68a;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --orange-500: #f97316;
+  --orange-600: #ea580c;
+  --gray-900: #111827;
+  --white: #ffffff;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--gray-900);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--amber-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--amber-400), var(--orange-500));
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, var(--amber-500), var(--orange-600));
+}
+
+.glass-effect {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, var(--amber-500), var(--orange-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  background: linear-gradient(to right, var(--amber-500), var(--orange-500));
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 300ms ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 15px -3px rgba(251, 191, 36, 0.2), 0 4px 6px -2px rgba(251, 191, 36, 0.05);
+  transform: scale(1.05);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-secondary {
+  padding: 12px 24px;
+  border: 2px solid var(--amber-500);
+  color: var(--amber-600);
+  border-radius: 12px;
+  font-weight: 600;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 300ms ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--amber-50);
+}
+
+.card-hover {
+  transition: all 300ms ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--amber-200);
+  color: var(--gray-900);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--amber-500);
+  outline-offset: 2px;
+}
